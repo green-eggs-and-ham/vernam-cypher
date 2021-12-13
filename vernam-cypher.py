@@ -123,7 +123,7 @@ class Vernam:
     def get_key(self):
         try:
             self.key_type=input("Key Strength (0=Weak,1=Medium,2=Strong):")
-            if self.key_type>1:print("Warning: Strong Key Strength is currently unsuitable for the translator.\nRecomendation:Manually remove obscure unicode characters.")
+            if int(self.key_type)>1:print("Warning: Strong Key Strength is currently unsuitable for the translator.\nRecomendation:Manually remove obscure unicode characters.")
             self.key_charas=""
             for i in range(0,int(input("Key Length:"))):
                 self.charatype=random.randint(0,int(self.key_type))            
